@@ -1,0 +1,44 @@
+
+ input {
+	 width:100%;
+	 box-sizing:border-box;
+}
+ 
+ body {
+	 background-color:lightblue;
+}
+
+ table,th,td{
+	 
+	 border:1px solid red;
+}
+ 
+ table {
+	 border-collapse:collapse;
+}
+ 
+ input[type=number]:focus {
+	 background-color:lightgreen;
+}
+ 
+ th{
+	 color:white;
+	 background-color:black;
+}
+ 
+ input[type=button] {
+	 width:15%;
+	 float:right;
+	 background-color:black;
+	 color:white;
+}
+#total,#totalpercent {
+	color:white;
+	background-color:black;
+}
+#grades,#percent {
+	color:black;
+	background-color:green;
+}
+ 
+	 

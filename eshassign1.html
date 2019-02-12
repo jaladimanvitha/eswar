@@ -1,0 +1,158 @@
+<!DOCTYPE html> 
+<html>
+ <head>
+  <link rel="stylesheet" type="text/css" href="eshassign1.css">
+  <script type="text/javascript" src="eshassign1.js"> 
+  </script>
+  
+ </head>
+ <body>
+  <form name="userForm">
+   <table id="table" >
+    <tr>
+    <th>Assessments</th>
+    <th>1</th>
+    <th>2</th>
+	<th>3</th>
+	<th>4</th>
+	<th>5</th>
+	<th>6</th>
+	<th>7</th>
+	<th>8</th>
+	<th>9</th>
+	<th>10</th>
+	<th>11</th>
+	<th>12</th>
+	<th>13</th>
+	<th>14</th>
+	<th>15</th>
+	</tr>
+	<tr>
+	<th>lab assignments</th>
+	<td><input id="a1" type="number" name="marks" min="0" max="25"></td>
+	<td><input id="a2" type="number" name="marks" min="0" max="25"></td>
+	<td><input id="a3" type="number" name="marks" min="0" max="25"></td>
+	<td><input id="a4" type="number" name="marks" min="0" max="25"></td>
+	<td><input id="a5" type="number" name="marks" min="0" max="25"></td>
+	<td><input id="a6" type="number" name="marks" min="0" max="25"></td>
+	<td><input id="a7" type="number" name="marks" min="0" max="25"></td>
+	<td><input id="a8" type="number" name="marks" min="0" max="25"></td>
+	<td><input id="a9" type="number" name="marks" min="0" max="25"></td>
+	<td><input id="a10" type="number" name="marks" min="0" max="25"></td>
+	<td></td>
+	<td></td>
+	<td></td>
+	<td></td>
+	<td></td>
+    </tr>
+	<th>Quiz</th>
+	<td><input id="q1" type="number" name="marks" min="0" max="10"></td>
+	<td><input id="q2" type="number" name="marks" min="0" max="10"></td>
+	<td><input id="q3" type="number" name="marks" min="0" max="10"></td>
+	<td><input id="q4" type="number" name="marks" min="0" max="10"></td>
+	<td><input id="q5" type="number" name="marks" min="0" max="10"></td>
+	<td><input id="q6" type="number" name="marks" min="0" max="10"></td>
+	<td><input id="q7" type="number" name="marks" min="0" max="10"></td>
+	<td><input id="q8" type="number" name="marks" min="0" max="10"></td>
+	<td><input id="q9" type="number" name="marks" min="0" max="10"></td>
+	<td><input id="q10" type="number" name="marks" min="0" max="10"></td>
+	<td></td>
+	<td></td>
+	<td></td>
+	<td></td>
+	<td></td>
+
+	</tr>
+	<tr>
+	<th>Participation</th>
+	<td><input id="p1" type="number" name="marks" min="0" max="5"></td>
+	<td><input id="p2" type="number" name="marks" min="0" max="5"></td>
+	<td><input id="p3" type="number" name="marks" min="0" max="5"></td>
+	<td><input id="p4" type="number" name="marks" min="0" max="5"></td>
+	<td><input id="p5" type="number" name="marks" min="0" max="5"></td>
+	<td><input id="p6" type="number" name="marks" min="0" max="5"></td>
+	<td><input id="p7" type="number" name="marks" min="0" max="5"></td>
+	<td><input id="p8" type="number" name="marks" min="0" max="5"></td>
+	<td><input id="p9" type="number" name="marks" min="0" max="5"></td>
+	<td><input id="p10" type="number" name="marks" min="0" max="5"></td>
+	<td><input id="p11" type="number" name="marks" min="0" max="5"></td>
+	<td><input id="p12" type="number" name="marks" min="0" max="5"></td>
+	<td><input id="p13" type="number" name="marks" min="0" max="5"></td>
+	<td><input id="p14" type="number" name="marks" min="0" max="5"></td>
+	<td><input id="p15" type="number" name="marks" min="0" max="5"></td>
+	</tr>
+	<tr>
+	<th>Exam</th>
+	<td><input id="e1" type="number" name="marks" min="0" max="100"></td>
+	<td><input id="e2" type="number" name="marks" min="0" max="100"></td>
+	<td></td>
+	<td></td>
+	<td></td>
+	<td></td>
+	<td></td>
+	<td></td>
+	<td></td>
+	<td></td>
+	<td></td>
+	<td></td>
+	<td></td>
+	<td></td>
+	<td></td>
+	</tr>
+	<tr>
+	<th>Project</th>
+	<td><input id="pr1" type="number" name="marks" min="0" max="100"></td>
+	<td></td>
+	<td></td>
+	<td></td>
+	<td></td>
+	<td></td>
+	<td></td>
+	<td></td>
+	<td></td>
+	<td></td>
+	<td></td>
+	<td></td>
+	<td></td>
+	<td></td>
+	<td></td>
+	</tr>
+	<tr>
+	<th>Extra credit</th>
+	<td><input id="ec1" type="number" name="marks" min="0" max="25"></td>
+	<td></td>
+	<td></td>
+	<td></td>
+	<td></td>
+	<td></td>
+	<td></td>
+	<td></td>
+	<td></td>
+	<td></td>
+	<td></td>
+	<td></td>
+	<td></td>
+	<td></td>
+	<td></td>
+
+	</tr>
+   </table>
+
+
+	<input type="button" name="total" value="calculate" onclick="displayTable()">
+  </form>
+  <div id="total"></div>
+  <div id="percent"></div>
+  <div id="totalpercent"></div>
+  <div id="grades"></div>
+   
+  
+
+            
+					
+	
+ </body>
+</html>
+
+
+
