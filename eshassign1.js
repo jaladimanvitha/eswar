@@ -36,13 +36,19 @@ function displayTable() {
 		var arr = [JSON.stringify(assign), JSON.stringify(quiz), JSON.stringify(part), JSON.stringify(exam), JSON.stringify(project), JSON.stringify(extra)];
 		//arr = JSON.stringify(assign)+','+JSON.stringify(quiz)+','+JSON.stringify(part)+','+JSON.stringify(exam)+','+JSON.stringify(project)+','+JSON.stringify(extra);
 		var cookie = JSON.stringify(arr);
+		setCookie(cookie);
+		getCookie();
+	
+		setCookie(var cookie) {
 		document.cookie = cookie;		
+		}
+		getCookie() {
 		arr = JSON.parse(cookie);
 		for(var i =0; i< arr.length ;i++) {
 			arr[i] = JSON.parse(arr[i]);
 			console.log(arr[i]);
 		}
-		
+		}
 		document.getElementById("total").innerHTML= "Total asignment marks:" + assign.earnedPoint + "<br>" + "Total quiz marks:" + quiz.earnedPoint + "<br>" + "Total participation marks:" + part.earnedPoint + "<br>" + "Total exam marks:" + exam.earnedPoint + "<br>" + "Total proj marks:" + project.earnedPoint + "<br>" + "Total extra marks" + extra.earnedPoint;
 		document.getElementById("percent").innerHTML="Assignment percent:" + assign.earnedPoint*(100/assign.maxPoint) +"<br>"+"Quiz percent:" + quiz.earnedPoint*(100/quiz.maxPoint)+"<br>"+"Participation percent:" + part.earnedPoint*(100/part.maxPoint)+"<br>"+"Exam percent:"+ exam.earnedPoint*(100/exam.maxPoint)+"<br>" +"Project percent:"+ project.earnedPoint*(100/project.maxPoint)+"<br>" +"Extra credits percent:" + extra.earnedPoint*(100/extra.maxPoint);
 		document.getElementById("totalpercent").innerHTML=assign.earnedPoint*(100/assign.maxPoint)+quiz.earnedPoint*(100/quiz.maxPoint)+part.earnedPoint*(100/part.maxPoint)+exam.earnedPoint*(100/exam.maxPoint)+project.earnedPoint*(100/project.maxPoint) +extra.earnedPoint*(100/extra.maxPoint);
