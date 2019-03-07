@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<link rel="stylesheet" type="text/css" href="eshassign4.css">
+  
+  <script src="http://code.jquery.com/jquery.min.js"> </script>
+  <script>
+  
+function addRow() {
+var $newRow = $('<tr> <td> <b>assign</b> <td><input type="text" class="one" size="5"></td> <td><input type="text" class="one" size="5"></td> <td><input type="text" class="one" size="5"></td> <td><input type="text" class="one" size="5"></td> <td><input type="text" class="one" size="5"></td> <td><input type="text" class="one" size="5"></td> <td><input type="text" class="one" size="5"></td> <td><input type="text" class="one" size="5"></td> <td><input type="text" class="one" size="5"></td> <td><input type="text" class="one" size="5"></td></tr> <tr> <td> <b>quiz</b> <td><input type="text" class="two" size="5"></td> <td><input type="text" class="two" size="5"></td> <td><input type="text" class="two" size="5"></td> <td><input type="text" class="two" size="5"></td> <td><input type="text" class="two" size="5"></td> <td><input type="text" class="two" size="5"></td> <td><input type="text" class="two" size="5"></td> <td><input type="text" class="two" size="5"></td> <td><input type="text" class="two" size="5"></td> <td><input type="text" class="two" size="5"></td></tr> <tr> <td> <b>part</b> <td><input type="text" class="three" size="5"></td> <td><input type="text" class="three" size="5"></td> <td><input type="text" class="three" size="5"></td> <td><input type="text" class="three" size="5"></td> <td><input type="text" class="three" size="5"></td> <td><input type="text" class="three" size="5"></td> <td><input type="text" class="three" size="5"></td> <td><input type="text" class="three" size="5"></td> <td><input type="text" class="three" size="5"></td> <td><input type="text" class="three" size="5"></td></tr> <tr> <td> <b>exam</b> <td><input type="text" class="four" size="5"></td> <td><input type="text" class="four" size="5"></td></tr> <tr> <td> <b>proj</b> <td><input type="text" class="five" size="5"></td></tr> <tr> <td> <b>extra credit</b> <td><input type="text" class="six" size="5"></td> </tr>');
+$('table').append($newRow);
+var clicked = 0;
+
+    $("#a").text += "<input type='button'>";
+    clicked++; //increment
+   if (clicked == 1) {
+		$('#id1').attr('disabled', true);
+ }
+ 
+ $(document).ready(function() {
+ var a,b,c,d,e,f;
+$(".one").on("change", function(){
+    var sum1=0;
+    $(".one").each(function(){
+        if($(this).val() !== "")
+          sum1 += parseInt($(this).val());   
+    });
+
+   a= $("#msg1").html(0.3*sum1);
+
+$(".two").on("change", function(){
+    var sum2=0;
+    $(".two").each(function(){
+        if($(this).val() !== "")
+          sum2 += parseInt($(this).val());   
+    });
+
+    b=$("#msg2").html(0.3*sum2);
+
+
+$(".three").on("change", function(){
+    var sum3=0;
+    $(".three").each(function(){
+        if($(this).val() !== "")
+          sum3 += parseInt($(this).val());   
+    });
+
+   c= $("#msg3").html(0.5*sum3);
+
+$(".four").on("change", function(){
+    var sum4=0;
+    $(".four").each(function(){
+        if($(this).val() !== "")
+          sum4 += parseInt($(this).val());   
+    });
+
+    d=$("#msg4").html(0.2*sum4);
+
+$(".five").on("change", function(){
+    var sum5=0;
+    $(".five").each(function(){
+        if($(this).val() !== "")
+          sum5 += parseInt($(this).val());   
+    });
+
+    e=$("#msg5").html(0.5*sum5);
+
+$(".six").on("change", function(){
+    var sum6=0;
+    $(".six").each(function(){
+        if($(this).val() !== "")
+          sum6 += parseInt($(this).val());   
+    });
+    
+	f=$("#msg6").html(0.5*sum6);
+	var total = 0;
+	console.log(document.getElementById('grand'));
+	$(".total").each(function() {
+		total = parseFloat($(this).text());
+		console.log('Inside this block');
+		console.log(total);
+	});
+	if (total >= 90) {
+
+                    $("#msg8").html('Your Final Grade Is: ' + "A");
+                }
+				
+                else if (total >= 80) {
+                    $("#msg8").html('Your Final Grade Is: ' + "B");
+
+                }
+                else if (total >= 70) {
+                   $("#msg8").html('Your Final Grade Is: ' + "D");
+                }
+                else if (total >= 60) {
+                    $("#msg8").html('Your Final Grade Is: ' + "E");
+                }
+                else {
+                    $("#msg8").html('Your Final Grade Is: ' + "F");
+                }
+ });
+	
+	
+				
+
+});
+});
+});
+});
+});
+
+ });
+ }
+
+</script>
+</head>
+
+<body>
+<table>
+<tr>
+<th>Assessments</th>
+ <th> col #1 </th>
+ <th> col #2 </th>
+ <th> col #3 </th>
+ <th> col #4 </th>
+ <th> col #5 </th>
+ <th> col #6 </th>
+ <th> col #7 </th>
+ <th> col #8 </th>
+ <th> col #9 </th>
+ <th> col #10 </th>
+ 
+ 
+</tr>
+
+</table> <br>
+
+
+<input type="button" id="id1" value="add Row" onclick="addRow()"> <br>
+
+<span id ="a">  </span><br>
+<div id="grand">
+<span id ="msg1" class="total"> </span><br>
+<span id ="msg2" class="total"> </span><br>
+<span id ="msg3" class="total"> </span><br>
+<span id ="msg4" class="total"></span><br>
+<span id ="msg5" class="total"></span><br>
+<span id ="msg6" class="total"></span><br>
+</div>
+<span id ="msg7"></span><br>
+<span id ="msg8"></span><br>
+<span id ="msg9"></span><br>
+<span class ="final"></span>
+</body>
+
+</html>
