@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.a,.b,.c,.d,.e,.f {
+float: left;
+margin: 5px;
+}
+</style>
+
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.0/themes/base/jquery-ui.css" />
+
+<script src="http://code.jquery.com/jquery-1.9.0.js"></script>
+
+<script src="http://code.jquery.com/ui/1.10.0/jquery-ui.js"></script>
+ <script type="text/javascript">
+ $(document).ready(function() {
+  $(document).tooltip();
+        });
+ $(function() {
+ $("#tabs").tabs();
+ 
+ $( function () {
+$("#date").datepicker();
+});
+});
+ </script>
+ <script>
+    var totalsum=0;
+ $(document).on("change", ".assignm", function() {
+    var sum = 0;
+    $(".assignm").each(function(){
+        if($(this).val() !== ''){
+            sum += +$(this).val();
+        }
+       
+    });
+    totalsum= sum;
+    $("#msg2").html(sum);    
+    $("#msg14").html(totalsum);
+});
+
+$(document).on("change", ".quiz", function() {
+    var sum = 0;
+    $(".quiz").each(function(){
+        sum += +$(this).val();
+    });
+    $("#msg4").html(sum);
+    $("#msg14").html(totalsum+sum);
+});
+$(document).on("change", ".part", function() {
+    var sum = 0;
+    $(".part").each(function(){
+        sum += +$(this).val();
+        
+    });
+    $("#msg6").html(sum);
+    $("#msg14").html(totalsum+sum);
+});
+$(document).on("change", ".exam", function() {
+    var sum = 0;
+    $(".exam").each(function(){
+        sum += +$(this).val();
+        
+    });
+    $("#msg8").html(sum);
+    $("#msg14").html(totalsum+sum);
+});
+$(document).on("change", ".proj", function() {
+    var sum = 0;
+    $(".proj").each(function(){
+        sum += +$(this).val();
+       
+    });
+    $("#msg10").html(sum);
+    $("#msg14").html(totalsum+sum);
+});
+$(document).on("change", ".extra", function() {
+    var sum = 0;
+    $(".extra").each(function(){
+        sum += +$(this).val();
+        
+    });
+    $("#msg12").html(sum);
+    $("#msg14").html(totalsum+sum);
+});
+
+ </script>
+ 
+ 
+</head>
+
+<body>
+<div id="tabs">
+<ul>
+<li><a href="#assign"> assignments </a></li>
+<li><a href="#quiz"> quiz </a></li>
+<li><a href="#part"> part  </a></li>
+<li><a href="#exam"> exam </a></li>
+<li><a href="#proj"> proj </a></li>
+<li><a href="#extra"> extra </a></li>
+</ul>
+
+<div id="assign"> 
+    <table title="Enter assign marks:">
+	<tr>
+	<td><input id="a1" class="assignm" type="number" name="marks" min="0" max="25" size="5"></td>
+	<td><input id="a2" class="assignm" type="number" name="marks" min="0" max="25" size="5"></td>
+	<td><input id="a3" class="assignm" type="number" name="marks" min="0" max="25" size="5"></td>
+	<td><input id="a4" class="assignm" type="number" name="marks" min="0" max="25" size="5"></td>
+	<td><input id="a5" class="assignm" type="number" name="marks" min="0" max="25" size="5"></td>
+	<td><input id="a6" class="assignm" type="number" name="marks" min="0" max="25" size="5"></td>
+	<td><input id="a7" class="assignm" type="number" name="marks" min="0" max="25" size="5"></td>
+	<td><input id="a8" class="assignm" type="number" name="marks" min="0" max="25" size="5"></td>
+	<td><input id="a9" class="assignm" type="number" name="marks" min="0" max="25" size="5"></td>
+	<td><input id="a10" class="assignm" type="number" name="marks" min="0" max="25" size="5"></td>
+    </tr>
+	</table>
+</div>
+
+<div id="quiz" > 
+<table title="Enter quiz marks:">
+<tr>
+    <td><input id="q1" class="quiz" type="number" name="marks" min="0" max="10" size="5"></td>
+	<td><input id="q2" class="quiz" type="number" name="marks" min="0" max="10" size="5"></td>
+	<td><input id="q3" class="quiz" type="number" name="marks" min="0" max="10" size="5"></td>
+	<td><input id="q4" class="quiz" type="number" name="marks" min="0" max="10" size="5"></td>
+	<td><input id="q5" class="quiz" type="number" name="marks" min="0" max="10" size="5"></td>
+	<td><input id="q6" class="quiz" type="number" name="marks" min="0" max="10" size="5"></td>
+	<td><input id="q7" class="quiz" type="number" name="marks" min="0" max="10" size="5"></td>
+	<td><input id="q8" class="quiz" type="number" name="marks" min="0" max="10" size="5"></td>
+	<td><input id="q9" class="quiz" type="number" name="marks" min="0" max="10" size="5"></td>
+	<td><input id="q10" class="quiz" type="number" name="marks" min="0" max="10" size="5"></td>
+</tr>
+</table>
+</div>
+<div id="part"> 
+<table title="Enter participation marks:">
+<tr>
+    <td><input id="p1" class="part" type="number" name="marks" min="0" max="5" size="5"></td>
+	<td><input id="p2" class="part" type="number" name="marks" min="0" max="5" size="5"></td>
+	<td><input id="p3" class="part" type="number" name="marks" min="0" max="5" size="5"></td>
+	<td><input id="p4" class="part" type="number" name="marks" min="0" max="5" size="5"></td>
+	<td><input id="p5" class="part" type="number" name="marks" min="0" max="5" size="5"></td>
+	<td><input id="p6" class="part" type="number" name="marks" min="0" max="5" size="5"></td>
+	<td><input id="p7" class="part" type="number" name="marks" min="0" max="5" size="5"></td>
+	<td><input id="p8" class="part" type="number" name="marks" min="0" max="5" size="5"></td>
+	<td><input id="p9" class="part" type="number" name="marks" min="0" max="5" size="5"></td>
+	<td><input id="p10" class="part" type="number" name="marks" min="0" max="5" size="5"></td>
+</tr>
+</table>
+</div>
+<div id="exam"> 
+<table title="Enter exam marks:">
+<tr>
+	<td><input id="e1" class="exam" type="number" name="marks" min="0" max="100" size="5"></td>
+	<td><input id="e2" class="exam" type="number" name="marks" min="0" max="100" size="5"></td>
+</tr>
+</table>
+</div>
+<div id="proj"> 
+<table title="Enter project marks:">
+<tr>
+<td><input id="pr1" class="proj" type="number" name="marks" min="0" max="100" size="5"></td>
+</tr>
+</table>
+</div>
+<div id="extra"> 
+<table title="Enter extra credit marks:">
+<tr>
+<td><input id="ec1" class="extra" type="number" name="marks" min="0" max="25" size="5"></td>
+</tr>
+</table>
+</div>
+<span> date: </span>
+<input type="text" title="choose a date:" id="date" />
+</div>
+<span id ="a">  </span><br>
+<div id="grand">
+<span id ="msg1" > </span>
+<span id ="msg2" class="total" type="number" name="total_marks"> </span><br>
+<span id ="msg3" > </span>
+<span id ="msg4" class="total" type="number" name="total_marks"> </span><br>
+<span id ="msg5" > </span>
+<span id ="msg6" class="total" type="number" name="total_marks"> </span><br>
+<span id ="msg7" > </span>
+<span id ="msg8" class="total" type="number" name="total_marks">  </span><br>
+<span id ="msg9" > </span>
+<span id ="msg10" class="total" type="number" name="total_marks"> </span><br>
+<span id ="msg11" > </span>
+<span id ="msg12" class="total" type="number" name="total_marks"> </span><br>
+<span id ="msg13"> </span>
+<span id ="msg14" > </span><br>
+</div>
+<span id ="msg15"></span><br>
+<div id="pb" style="width: 200px; height: 15px"></div>
+<div>
+<div class="a"> Assign: </div>
+<div value="a1" class="a" id="slider1" style="height:40px;"></div>
+<div value="a2" class="a" id="slider2" style="height:40px;"></div>
+<div value="a3" class="a" id="slider3" style="height:40px;"></div>
+<div value="a4" class="a" id="slider4" style="height:40px;"></div>
+<div value="a5" class="a" id="slider5" style="height:40px;"></div>
+<div value="a6" class="a" id="slider6" style="height:40px;"></div>
+<div value="a7" class="a" id="slider7" style="height:40px;"></div>
+<div value="a8" class="a" id="slider8" style="height:40px;"></div>
+<div value="a9" class="a" id="slider9" style="height:40px;"></div>
+<div value="a10" class="a" id="slider10" style="height:40px;"></div>
+</div>
+<div>
+<div class="b"> quiz: </div>
+<div class="b" id="slider11" style="height:40px;"></div>
+<div class="b" id="slider21" style="height:40px;"></div>
+<div class="b" id="slider31" style="height:40px;"></div>
+<div class="b" id="slider41" style="height:40px;"></div>
+<div class="b" id="slider51" style="height:40px;"></div>
+<div class="b" id="slider61" style="height:40px;"></div>
+<div class="b" id="slider71" style="height:40px;"></div>
+<div class="b" id="slider81" style="height:40px;"></div>
+<div class="b" id="slider91" style="height:40px;"></div>
+<div class="b" id="slider101" style="height:40px;"></div>
+</div>
+<div>
+<div class="c"> part: </div>
+<div class="c" id="slider111" style="height:40px;"></div>
+<div class="c" id="slider211" style="height:40px;"></div>
+<div class="c" id="slider311" style="height:40px;"></div>
+<div class="c" id="slider411" style="height:40px;"></div>
+<div class="c" id="slider511" style="height:40px;"></div>
+<div class="c" id="slider611" style="height:40px;"></div>
+<div class="c" id="slider711" style="height:40px;"></div>
+<div class="c" id="slider811" style="height:40px;"></div>
+<div class="c" id="slider911" style="height:40px;"></div>
+<div class="c" id="slider1011" style="height:40px;"></div>
+</div>
+<div>
+<div class="d"> exam: </div>
+<div class="d" id="slider1111" style="height:40px;"></div>
+<div class="d" id="slider2111" style="height:40px;"></div>
+</div>
+<div>
+<div class="e"> proj: </div>
+<div class="e" id="slider11111" style="height:40px;"></div>
+</div>
+<div>
+<div class="f"> extra: </div>
+<div class="f" id="slider111111" style="height:40px;"></div>
+</div>
+
+<span class ="final"></span>
+</body>
+
+</html>
