@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.a,.b,.c,.d,.e,.f {
+float: left;
+margin: 5px;
+}
+</style>
+
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.0/themes/base/jquery-ui.css" />
+
+<script src="http://code.jquery.com/jquery-1.9.0.js"></script>
+
+<script src="http://code.jquery.com/ui/1.10.0/jquery-ui.js"></script>
+ <script type="text/javascript">
+ $(document).ready(function() {
+  $(document).tooltip();
+        });
+ $(function() {
+ $("#tabs").tabs();
+ 
+ $( function () {
+$("#date").datepicker();
+});
+});
+ </script>
+ <script>
+    var totalsum=0,sum1,sum2,sum3,sum4,sum5,sum6;
+ $(document).on("change", ".assignm", function() {
+     sum1 = 0;
+    $(".assignm").each(function(){
+        if($(this).val() !== ''){
+            sum1 += parseInt($(this).val());
+        }
+   });  
+ totalsum= sum1;
+	$("#msg1").html("Assignment marks:");
+    $("#msg2").html(0.3*sum1);    
+    $("#msg14").html(totalsum);   
+  });  
+	$( function () {
+$("#slider1").slider( {
+orientation: "vertical",range: "min",min:0,max:100,value:0,
+slide: function(event, ui) {
+ $("#a1").val(ui.value);
+}
+
+});
+$("#slider2").slider( {
+orientation: "vertical",range: "min",min:0,max:100,value:0,
+slide: function(event, ui) {
+ $("#a2").val(ui.value);
+}
+});
+$("#slider3").slider( {
+orientation: "vertical",range: "min",min:0,max:100,value:0,
+slide: function(event, ui) {
+ $("#a3").val(ui.value);
+}
+});
+$("#slider4").slider( {
+orientation: "vertical",range: "min",min:0,max:100,value:0,
+slide: function(event, ui) {
+ $("#a4").val(ui.value);
+}
+});
+$("#slider5").slider( {
+orientation: "vertical",range: "min",min:0,max:100,value:0,
+slide: function(event, ui) {
+ $("#a5").val(ui.value);
+}
+});
+$("#slider6").slider( {
+orientation: "vertical",range: "min",min:0,max:100,value:0,
+slide: function(event, ui) {
+ $("#a6").val(ui.value);
+}
+});
+$("#slider7").slider( {
+orientation: "vertical",range: "min",min:0,max:100,value:0,
+slide: function(event, ui) {
+ $("#a7").val(ui.value);
+}
+});
+$("#slider8").slider( {
+orientation: "vertical",range: "min",min:0,max:100,value:0,
+slide: function(event, ui) {
+ $("#a8").val(ui.value);
+}
+});
+$("#slider9").slider( {
+orientation: "vertical",range: "min",max:100,value:0,
+slide: function(event, ui) {
+ $("#a9").val(ui.value);
+}
+});
+$("#slider10").slider( {
+orientation: "vertical",range: "min",min:0,max:100,value:0,
+slide: function(event, ui) {
+ $("#a10").val(ui.value);
+}
+});
+
+});
+    
+
+$(document).on("change", ".quiz", function() {
+     sum2 = 0;
+    $(".quiz").each(function(){
+        sum2 += +$(this).val();
+    });
+	$("#msg3").html("Quiz marks:");
+    $("#msg4").html(0.1*sum2);
+    $("#msg14").html(sum1+sum2);
+});
+$( function () {
+$("#slider11").slider( {
+orientation: "vertical",range: "min",min:0,max:100,value:0,
+slide: function(event, ui) {
+ $("#q1").val(ui.value);
+}
+});
+$("#slider21").slider( {
+orientation: "vertical",range: "min",min:0,max:100,value:0,
+slide: function(event, ui) {
+ $("#q2").val(ui.value);
+}
+});
+$("#slider31").slider( {
+orientation: "vertical",range: "min",max:100,value:0,
+slide: function(event, ui) {
+ $("#q3").val(ui.value);
+}
+});
+$("#slider41").slider( {
+orientation: "vertical",range: "min",max:100,value:0,
+slide: function(event, ui) {
+ $("#q4").val(ui.value);
+}
+});
+$("#slider51").slider( {
+orientation: "vertical",range: "min",min:0,max:100,value:0,
+slide: function(event, ui) {
+ $("#q5").val(ui.value);
+}
+});
+$("#slider61").slider( {
+orientation: "vertical",range: "min",min:0,max:100,value:0,
+slide: function(event, ui) {
+ $("#q6").val(ui.value);
+}
+});
+$("#slider71").slider( {
+orientation: "vertical",range: "min",min:0,max:100,value:0,
+slide: function(event, ui) {
+ $("#q7").val(ui.value);
+}
+});
+$("#slider81").slider( {
+orientation: "vertical",range: "min",max:100,value:0,
+slide: function(event, ui) {
+ $("#q8").val(ui.value);
+}
+});
+$("#slider91").slider( {
+orientation: "vertical",range: "min",min:0,max:100,value:0,
+slide: function(event, ui) {
+ $("#q9").val(ui.value);
+}
+});
+$("#slider101").slider( {
+orientation: "vertical",range: "min",min:0,value:0,
+slide: function(event, ui) {
+ $("#q10").val(ui.value);
+}
+});
+});
+$(document).on("change", ".part", function() {
+     sum3 = 0;
+    $(".part").each(function(){
+        sum3 += +$(this).val();
+        
+    });
+	$("#msg5").html("Part marks:");
+    $("#msg6").html(0.1*sum3);
+    $("#msg14").html(sum1+sum2+sum3);
+});
+$( function () {
+$("#slider111").slider( {
+orientation: "vertical",range: "min",min:0,max:100,value:0,
+slide: function(event, ui) {
+ $("#p1").val(ui.value);
+}
+});
+$("#slider211").slider( {
+orientation: "vertical",range: "min",min:0,max:100,value:0,
+slide: function(event, ui) {
+ $("#p2").val(ui.value);
+}
+});
+$("#slider311").slider( {
+orientation: "vertical",range: "min",min:0,max:100,value:0,
+slide: function(event, ui) {
+ $("#p3").val(ui.value);
+}
+});
+$("#slider411").slider( {
+orientation: "vertical",range: "min",min:0,max:100,value:0,
+slide: function(event, ui) {
+ $("#p4").val(ui.value);
+}
+});
+$("#slider511").slider( {
+orientation: "vertical",range: "min",min:0,max:100,value:0,
+slide: function(event, ui) {
+ $("#p5").val(ui.value);
+}
+});
+$("#slider611").slider( {
+orientation: "vertical",range: "min",min:0,max:100,value:0,
+slide: function(event, ui) {
+ $("#p6").val(ui.value);
+}
+});
+$("#slider711").slider( {
+orientation: "vertical",range: "min",min:0,max:100,value:0,
+slide: function(event, ui) {
+ $("#p7").val(ui.value);
+}
+});
+$("#slider811").slider( {
+orientation: "vertical",range: "min",min:0,max:100,value:0,
+slide: function(event, ui) {
+ $("#p8").val(ui.value);
+}
+});
+$("#slider911").slider( {
+orientation: "vertical",range: "min",min:0,max:100,value:0,
+slide: function(event, ui) {
+ $("#p9").val(ui.value);
+}
+});
+$("#slider1011").slider( {
+orientation: "vertical",range: "min",min:0,max:100,value:0,
+slide: function(event, ui) {
+ $("#p10").val(ui.value);
+}
+});
+});
+$(document).on("change", ".exam", function() {
+     sum4 = 0;
+    $(".exam").each(function(){
+        sum4 += +$(this).val();
+        
+    });
+	$("#msg7").html("Exam marks:");
+    $("#msg8").html(0.3*sum4);
+    $("#msg14").html(sum1+sum2+sum3+sum4);
+});
+$( function () {
+$("#slider1111").slider( {
+orientation: "vertical",range: "min",min:0,max:100,value:0,
+slide: function(event, ui) {
+ $("#e1").val(ui.value);
+}
+});
+$("#slider2111").slider( {
+orientation: "vertical",range: "min",min:0,max:100,value:0,
+slide: function(event, ui) {
+ $("#e2").val(ui.value);
+}
+});
+});
+
+
+$( function () {
+$("#slider11111").slider( {
+orientation: "vertical",range: "min",min:0,max:100,value:0,
+slide: function(event, ui) {
+ $("#pr1").val(ui.value);
+}
+});
+});
+$(document).on("change", ".proj", function() {
+     sum5 = 0;
+    $(".proj").each(function(){
+        sum5 += +$(this).val();
+       
+    });
+	$("#msg9").html("Proj marks:");
+    $("#msg10").html(0.2*sum5);
+    $("#msg14").html(sum1+sum2+sum3+sum4+sum5);
+});
+$( function () {
+$("#slider11111").slider( {
+orientation: "vertical",range: "min",min:0,max:100,value:0,
+slide: function(event, ui) {
+ $("#pr1").val(ui.value);
+}
+});
+});
+
+$(document).on("change", ".extra", function() {
+     sum6 = 0;
+    $(".extra").each(function(){
+        sum6 += +$(this).val();
+        
+    });
+	$("#msg11").html("extra marks:");
+    $("#msg12").html(0.05*sum6);
+    $("#msg14").html(sum1+sum2+sum3+sum4+sum5+sum6);
+});
+$( function () {
+$("#slider111111").slider( {
+orientation: "vertical",range: "min",min:0,max:100,value:0,
+slide: function(event, ui) {
+ $("#ec1").val(ui.value);
+}
+});
+});
+ </script>
+ 
+ 
+</head>
+
+<body>
+<div id="tabs">
+<ul>
+<li><a href="#assign"> assignments </a></li>
+<li><a href="#quiz"> quiz </a></li>
+<li><a href="#part"> part  </a></li>
+<li><a href="#exam"> exam </a></li>
+<li><a href="#proj"> proj </a></li>
+<li><a href="#extra"> extra </a></li>
+</ul>
+
+<div id="assign"> 
+    <table title="Enter assign marks:">
+	<tr>
+	<td><input id="a1" class="assignm" type="number" name="marks" min="0" max="25" size="5" readonly></td>
+	<td><input id="a2" class="assignm" type="number" name="marks" min="0" max="25" size="5" readonly></td>
+	<td><input id="a3" class="assignm" type="number" name="marks" min="0" max="25" size="5" readonly></td>
+	<td><input id="a4" class="assignm" type="number" name="marks" min="0" max="25" size="5" readonly></td>
+	<td><input id="a5" class="assignm" type="number" name="marks" min="0" max="25" size="5" readonly></td>
+	<td><input id="a6" class="assignm" type="number" name="marks" min="0" max="25" size="5" readonly></td>
+	<td><input id="a7" class="assignm" type="number" name="marks" min="0" max="25" size="5" readonly></td>
+	<td><input id="a8" class="assignm" type="number" name="marks" min="0" max="25" size="5" readonly></td>
+	<td><input id="a9" class="assignm" type="number" name="marks" min="0" max="25" size="5" readonly></td>
+	<td><input id="a10" class="assignm" type="number" name="marks" min="0" max="25" size="5" readonly></td>
+    </tr>
+	<tr>
+	<div>
+<div class="a"> Assign: </div>
+<td><div value="a1" class="a" id="slider1" style="height:40px;"></div>
+<td><div value="a2" class="a" id="slider2" style="height:40px;"></div>
+<td><div value="a3" class="a" id="slider3" style="height:40px;"></div>
+<td><div value="a4" class="a" id="slider4" style="height:40px;"></div>
+<td><div value="a5" class="a" id="slider5" style="height:40px;"></div>
+<td><div value="a6" class="a" id="slider6" style="height:40px;"></div>
+<td><div value="a7" class="a" id="slider7" style="height:40px;"></div>
+<td><div value="a8" class="a" id="slider8" style="height:40px;"></div>
+<td><div value="a9" class="a" id="slider9" style="height:40px;"></div>
+<td><div value="a10" class="a" id="slider10" style="height:40px;"></div>
+</div>
+	</tr>
+	</table>
+</div>
+
+<div id="quiz" > 
+<table title="Enter quiz marks:">
+<tr>
+    <td><input id="q1" class="quiz" type="number" name="marks" min="0" max="10" size="5" readonly></td>
+	<td><input id="q2" class="quiz" type="number" name="marks" min="0" max="10" size="5" readonly></td>
+	<td><input id="q3" class="quiz" type="number" name="marks" min="0" max="10" size="5" readonly></td>
+	<td><input id="q4" class="quiz" type="number" name="marks" min="0" max="10" size="5" readonly></td>
+	<td><input id="q5" class="quiz" type="number" name="marks" min="0" max="10" size="5" readonly></td>
+	<td><input id="q6" class="quiz" type="number" name="marks" min="0" max="10" size="5" readonly></td>
+	<td><input id="q7" class="quiz" type="number" name="marks" min="0" max="10" size="5" readonly></td>
+	<td><input id="q8" class="quiz" type="number" name="marks" min="0" max="10" size="5" readonly></td>
+	<td><input id="q9" class="quiz" type="number" name="marks" min="0" max="10" size="5" readonly></td>
+	<td><input id="q10" class="quiz" type="number" name="marks" min="0" max="10" size="5" readonly></td>
+</tr>
+<tr>
+<div>
+<div class="b"> quiz: </div>
+<td><div class="b" id="slider11" style="height:40px;"></div></td>
+<td><div class="b" id="slider21" style="height:40px;"></div></td>
+<td><div class="b" id="slider31" style="height:40px;"></div></td>
+<td><div class="b" id="slider41" style="height:40px;"></div></td>
+<td><div class="b" id="slider51" style="height:40px;"></div></td>
+<td><div class="b" id="slider61" style="height:40px;"></div></td>
+<td><div class="b" id="slider71" style="height:40px;"></div></td>
+<td><div class="b" id="slider81" style="height:40px;"></div></td>
+<td><div class="b" id="slider91" style="height:40px;"></div></td>
+<td><div class="b" id="slider101" style="height:40px;"></div></td>
+</div>
+</tr>
+</table>
+</div>
+<div id="part"> 
+<table title="Enter participation marks:">
+<tr>
+    <td><input id="p1" class="part" type="number" name="marks" min="0" max="5" size="5" readonly></td>
+	<td><input id="p2" class="part" type="number" name="marks" min="0" max="5" size="5" readonly></td>
+	<td><input id="p3" class="part" type="number" name="marks" min="0" max="5" size="5" readonly></td>
+	<td><input id="p4" class="part" type="number" name="marks" min="0" max="5" size="5" readonly></td>
+	<td><input id="p5" class="part" type="number" name="marks" min="0" max="5" size="5" readonly></td>
+	<td><input id="p6" class="part" type="number" name="marks" min="0" max="5" size="5" readonly></td>
+	<td><input id="p7" class="part" type="number" name="marks" min="0" max="5" size="5" readonly></td>
+	<td><input id="p8" class="part" type="number" name="marks" min="0" max="5" size="5" readonly></td>
+	<td><input id="p9" class="part" type="number" name="marks" min="0" max="5" size="5" readonly></td>
+	<td><input id="p10" class="part" type="number" name="marks" min="0" max="5" size="5" readonly></td>
+</tr>
+<tr>
+<div>
+<div class="c"> part: </div>
+<td><div class="c" id="slider111" style="height:40px;"></div></td>
+<td><div class="c" id="slider211" style="height:40px;"></div></td>
+<td><div class="c" id="slider311" style="height:40px;"></div></td>
+<td><div class="c" id="slider411" style="height:40px;"></div></td>
+<td><div class="c" id="slider511" style="height:40px;"></div></td>
+<td><div class="c" id="slider611" style="height:40px;"></div></td>
+<td><div class="c" id="slider711" style="height:40px;"></div></td>
+<td><div class="c" id="slider811" style="height:40px;"></div></td>
+<td><div class="c" id="slider911" style="height:40px;"></div></td>
+<td><div class="c" id="slider1011" style="height:40px;"></div></td>
+</div>
+</tr>
+</table>
+</div>
+<div id="exam"> 
+<table title="Enter exam marks:">
+<tr>
+	<td><input id="e1" class="exam" type="number" name="marks" min="0" max="100" size="5" readonly></td>
+	<td><input id="e2" class="exam" type="number" name="marks" min="0" max="100" size="5" readonly></td>
+</tr>
+<tr>
+<div>
+<div class="d"> exam: </div>
+<td><div class="d" id="slider1111" style="height:40px;"></div></td>
+<td><div class="d" id="slider2111" style="height:40px;"></div></td>
+</div>
+</tr>
+</table>
+</div>
+<div id="proj"> 
+<table title="Enter project marks:">
+<tr>
+<td><input id="pr1" class="proj" type="number" name="marks" min="0" max="100" size="5" readonly></td>
+</tr>
+<tr>
+<div>
+<div class="e"> proj: </div>
+<td><div class="e" id="slider11111" style="height:40px;"></div></td>
+</div>
+</tr>
+</table>
+</div>
+<div id="extra"> 
+<table title="Enter extra credit marks:">
+<tr>
+<td><input id="ec1" class="extra" type="number" name="marks" min="0" max="25" size="5" readonly></td>
+</tr>
+<tr>
+<div>
+<div class="f"> extra: </div>
+</td><div class="f" id="slider111111" style="height:40px;"></div></td>
+</div>
+</tr>
+</table>
+</div>
+<span> date: </span>
+<input type="text" title="choose a date:" id="date" />
+</div>
+<span id ="a">  </span><br>
+<div id="grand">
+<span id ="msg1" > </span>
+<span id ="msg2" class="total" type="number" name="total_marks"> </span><br>
+<span id ="msg3" > </span>
+<span id ="msg4" class="total" type="number" name="total_marks"> </span><br>
+<span id ="msg5" > </span>
+<span id ="msg6" class="total" type="number" name="total_marks"> </span><br>
+<span id ="msg7" > </span>
+<span id ="msg8" class="total" type="number" name="total_marks">  </span><br>
+<span id ="msg9" > </span>
+<span id ="msg10" class="total" type="number" name="total_marks"> </span><br>
+<span id ="msg11" > </span>
+<span id ="msg12" class="total" type="number" name="total_marks"> </span><br>
+<span id ="msg13"> </span>
+<span id ="msg14" > </span><br>
+</div>
+<span id ="msg15"></span><br>
+<div id="pb" style="width: 200px; height: 15px"></div>
+
+
+
+
+
+
+
+<span class ="final"></span>
+</body>
+
+</html>
