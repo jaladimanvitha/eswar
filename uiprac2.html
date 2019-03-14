@@ -28,11 +28,13 @@ $("#date").datepicker();
  <script>
  $(document).ready( function() {
  $(".assignm").change(function(){
+ 
     var sum1=0;
     $(".assignm").each(function(){
         if($(this).val() !== "")
           sum1 += parseInt($(this).val());  	
 	  });
+	  
 $( function () {
 $("#slider1").slider( {
 orientation: "vertical",range: "min",min:0,max:100,value:0,
@@ -308,33 +310,33 @@ $("#msg11").html("extra marks:");
 	if ( tota >= 90) {
                       $( function () {
 					  console.log(tota);
-                      $("#pb").progressbar( {value: tota} );
+                      $("#pb").val(tota);
                             });   
                     //$("#msg15").html('Your Final Grade Is: ' + "A");
                 }
 				
                 else if (tota >= 80) {
 				 $( function () {
-                      $("#pb").progressbar( {value: tota} );
+                      $("#pb").val(tota);
                             });   
                     //$("#msg15").html('Your Final Grade Is: ' + "B");
 
                 }
                 else if (tota >= 70) {
 				 $( function () {
-                      $("#pb").progressbar( {value: tota} );
+                      $("#pb").val(tota);
                             });   
                    //$("#msg15").html('Your Final Grade Is: ' + "D");
                 }
                 else if (tota >= 60) {
                      $( function () {
-                      $("#pb").progressbar( {value: 0} );
+                      $("#pb").val(tota);
                             });   
 					//$("#msg15").html('Your Final Grade Is: ' + "E");
                 }
                 else {
 				 $( function () {
-                      $("#pb").progressbar( {value: 0} );
+                      $("#pb").val(tota);
                             });   
                     //$("#msg15").html('Your Final Grade Is: ' + "F");
                 }
@@ -456,7 +458,8 @@ $("#msg11").html("extra marks:");
 <span id ="msg14" > </span><br>
 </div>
 <span id ="msg15"></span><br>
-<div id="pb" style="width: 200px; height: 15px"></div>
+
+<progress id="pb" value="0" max="100"/>
 <div>
 <div class="a"> Assign: </div>
 <div value="a1" class="a" id="slider1" style="height:40px;"></div>
