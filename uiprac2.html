@@ -307,38 +307,55 @@ $("#msg11").html("extra marks:");
     var total= $("#msg14").html(total1);
     console.log(total.html());
 	var tota=total.html();
+	var arr = [JSON.stringify(sum1), JSON.stringify(sum2), JSON.stringify(sum3), JSON.stringify(sum4), JSON.stringify(sum5), JSON.stringify(sum6)];
+		
+		var cookie = JSON.stringify(arr);
+		setCookie(cookie);
+		console.log("cookie is:"+ document.cookie);
+		getCookie();
+		
+		function setCookie(cookie) {
+			document.cookie=cookie;
+		}
+		function getCookie() {		
+		arr = JSON.parse(cookie);
+		for(var i =0; i< arr.length ;i++) {
+			arr[i] = JSON.parse(arr[i]);
+			console.log(arr[i]);
+		}
+		}
 	if ( tota >= 90) {
                       $( function () {
 					  console.log(tota);
                       $("#pb").val(tota);
                             });   
-                    //$("#msg15").html('Your Final Grade Is: ' + "A");
+                    $("#msg15").html('Your Final Grade Is: ' + "A");
                 }
 				
                 else if (tota >= 80) {
 				 $( function () {
                       $("#pb").val(tota);
                             });   
-                    //$("#msg15").html('Your Final Grade Is: ' + "B");
+                    $("#msg15").html('Your Final Grade Is: ' + "B");
 
                 }
                 else if (tota >= 70) {
 				 $( function () {
                       $("#pb").val(tota);
                             });   
-                   //$("#msg15").html('Your Final Grade Is: ' + "D");
+                   $("#msg15").html('Your Final Grade Is: ' + "D");
                 }
                 else if (tota >= 60) {
                      $( function () {
                       $("#pb").val(tota);
                             });   
-					//$("#msg15").html('Your Final Grade Is: ' + "E");
+					$("#msg15").html('Your Final Grade Is: ' + "E");
                 }
                 else {
 				 $( function () {
                       $("#pb").val(tota);
                             });   
-                    //$("#msg15").html('Your Final Grade Is: ' + "F");
+                    $("#msg15").html('Your Final Grade Is: ' + "F");
                 }
  
    
@@ -459,7 +476,7 @@ $("#msg11").html("extra marks:");
 </div>
 <span id ="msg15"></span><br>
 
-<progress id="pb" value="0" max="100"/>
+<progress id="pb" value="0" max="100"></progress>
 <div>
 <div class="a"> Assign: </div>
 <div value="a1" class="a" id="slider1" style="height:40px;"></div>
