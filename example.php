@@ -54,7 +54,7 @@ mysqli_free_result($res);
 }
 else { echo "no matching"; }
 }
-else { echo "....." . mysqli_error($res); }
+else { echo "....." $conn->error; }
 }
 
 ?>
